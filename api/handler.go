@@ -44,12 +44,6 @@ func ModelListHandler(c *gin.Context) {
 			},
 			openai.Model{
 				CreatedAt: 1686935002,
-				ID:        adapter.Gemini1Dot5ProV,
-				Object:    "model",
-				OwnedBy:   "google",
-			},
-			openai.Model{
-				CreatedAt: 1686935002,
 				ID:        adapter.TextEmbedding004,
 				Object:    "model",
 				OwnedBy:   "openai",
@@ -114,7 +108,7 @@ func ChatProxyHandler(c *gin.Context) {
 	}
 	defer client.Close()
 
-	model := req.ToGenaiModel()
+	model := req.Model
 	gemini := adapter.NewGeminiAdapter(client, model)
 
 	if !req.Stream {
