@@ -7,7 +7,6 @@ This is a fork of zhu327/gemini-openai-proxy that eliminates the mapping of open
 ---
 
 ## Table of Contents
-
 - [Gemini-OpenAI-Proxy](#gemini-openai-proxy)
   - [Table of Contents](#table-of-contents)
   - [Build](#build)
